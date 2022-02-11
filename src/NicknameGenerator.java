@@ -36,13 +36,27 @@ public class NicknameGenerator
      */
     public ArrayList<String> shortLastNames()
     {
-    /* Try your answer from part (a) */
+    ArrayList<String> shortened = new ArrayList<String>();
+    if (numVowels() < 2) {
+        shortened.add(lastName);
+    }
+    else {
+        for (int i = indexOfFirstVowel()+1); i<= lastName.length(); i++) {
+            shortened.add(lastName.substring(0, i));
+        }
+    }
+    return shortened;
     }
 
     /** Returns a list of nicknames, as described in part (b). */
     public ArrayList<String> nicknames()
     {
-        /* Try your answer from part (b) */
+        ArrayList<String> nicks = new ArrayList<String>();
+        ArrayList<String> lastNames= shortLastNames();
+        for (String name : lastNames) {
+            nicks.add(firstName.substring(0, 1) + "-" + name);
+        }
+        return nicks;
     }
 }
 
