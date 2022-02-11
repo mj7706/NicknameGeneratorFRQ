@@ -1,6 +1,4 @@
-import java.lang.reflect.Array;
 import java.util.ArrayList;
-import java.util.Locale;
 
 public class NicknameGenerator
 {
@@ -15,7 +13,7 @@ public class NicknameGenerator
     private String lastName;
 
     /** Construct with first name and last name assignments */
-   
+
     /** Returns the number of vowels in lastName. */
     private int numVowels()
     {
